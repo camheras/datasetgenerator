@@ -5,12 +5,10 @@ class DatasetGenerator:
     def __init__(self, filename, nb_lignes, *params):
         self.filename = filename
         self.create_file()
-        with open(filename, "w") as file:
-            for param in params:
-                if isinstance(param, Parameter):
-                    print(f"{param}")
-
-
+        while range(nb_lignes):
+            with open(filename, "w") as file:
+                for param in params:
+                    if isinstance(param, Parameter):
 
 
     def create_file(self):
